@@ -2,9 +2,10 @@
 featuring a flexible layout, improved UI and last but not least, SASS and Compass.
 
 This is a work in progress, and will most probably remain dirty.
+You're welcome to participate.
 
 To get this up and running
 
  * open a terminal window and navigate to the location of your Liferay Plugins SDK "theme"-folder: `cd ${PLUGINS_SDK_HOME}/themes`
  * inside the "themes"-directory, clone this repository by entering `git clone git@github.com:fk/custom-control-panel-theme.git`
- * modify the "build-common-theme.xml" of your Liferay Plugins SDK as described here: http://www.liferay.com/de/community/forums/-/message_boards/message/10803827
+ * modify the "build-common-theme.xml" of your Liferay Plugins SDK as described here: http://www.liferay.com/de/community/forums/-/message_boards/message/10803827 (yes, there may be a more elegant way, and probably will be in the future)
