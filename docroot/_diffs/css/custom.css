@@ -686,7 +686,7 @@ body {
 }
 .site-breadcrumbs li span, .site-breadcrumbs li.last span {
   background-image: url(../images/custom/breadcrumbs.png);
-  padding: 10px 15px 10px 5px;
+  padding: 10px 20px 10px 5px;
 }
 
 .lfr-ctrl-panel.panel-manage-portal .portlet-topper, .lfr-ctrl-panel.panel-manage-server .portlet-topper {
@@ -733,6 +733,9 @@ body {
 .lfr-ctrl-panel .panel-page-category .selected-portlet a {
   border: 0;
   background-image: none;
+}
+.lfr-ctrl-panel .panel-page-category .category-portlets a img[style] {
+  background-image: url(../images/custom/sprite.png) !important;
 }
 .lfr-ctrl-panel #panel-manage-portal .lfr-panel-titlebar,
 .lfr-ctrl-panel #panel-manage-server .lfr-panel-titlebar {
