@@ -10,3 +10,4 @@ docroot/sass
 docroot/templates
 docroot/.sass-cache
 docroot/_diffs/.sass-cache
+docroot/config.rb
