@@ -439,7 +439,7 @@ html > .lfr-dockbar-pinned {
 /* custom dockbar */
 .dockbar {
   background: #2d2d2d;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #141414;
 }
 .dockbar a {
   color: #f4f4f4;
@@ -812,18 +812,15 @@ textarea,
 .results-row.alt td {
   background-color: #f9f9f9;
 }
-
-.results-row td {
-  border-bottom: 1px solid #e4e4e4;
-}
-
 .results-row.hover a {
   text-decoration: underline;
 }
 .results-row.hover td {
   background: #ffffcc;
 }
-
+.results-row td {
+  border-bottom: 1px solid #e4e4e4;
+}
 .results-row a {
   text-decoration: none;
 }

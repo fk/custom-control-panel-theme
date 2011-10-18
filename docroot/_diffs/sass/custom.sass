@@ -153,20 +153,17 @@ textarea,
 .results-header th,
 .results-header td,
   background-color: $grey_light
-
-.results-row.alt td
-  background-color: lighten($grey_light,2%)
-
-.results-row td
-  border-bottom: 1px solid $grey
-
-.results-row.hover
-  a
-    text-decoration: underline
+.results-row
+  &.alt td
+    background-color: lighten($grey_light,2%)
+  &.hover
+    a
+      text-decoration: underline
+    td
+      background: #ffc
   td
-    background: #ffc
-
-.results-row a
-  text-decoration: none
-  &:hover
-    text-decoration: underline
+    border-bottom: 1px solid $grey
+  a
+    text-decoration: none
+    &:hover
+      text-decoration: underline
