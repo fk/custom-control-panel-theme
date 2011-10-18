@@ -1,0 +1,12 @@
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+docroot/css/
+docroot/images
+docroot/js
+docroot/sass
+docroot/templates
+docroot/.sass-cache
+docroot/_diffs/.sass-cache
