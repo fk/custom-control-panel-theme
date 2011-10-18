@@ -757,6 +757,7 @@ body {
 }
 .aui-tabview-list a {
   text-decoration: none;
+  font-weight: normal;
 }
 
 .aui-tabview-list,
@@ -772,6 +773,7 @@ body {
 .aui-tab-active a {
   color: #333333;
   text-shadow: none;
+  font-weight: bold;
 }
 .aui-tab-active:after {
   border-color: #e4e4e4 transparent transparent;
