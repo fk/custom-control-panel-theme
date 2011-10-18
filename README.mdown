@@ -1,4 +1,6 @@
-An alternative "Control Panel"-theme for Liferay, featuring a flexible layout, improved UI and last but not least, SASS and Compass.
+**An alternative "Control Panel"-theme for Liferay**
+featuring a flexible layout, improved UI and last but not least, SASS and Compass
 
-This is a work in progress.
+This is a work in progress, and will most probably remain dirty.
+
 To get this up and running, you'll need to modify the "build-common-theme.xml" of your Liferay Plugins SDK as described here: http://www.liferay.com/de/community/forums/-/message_boards/message/10803827
