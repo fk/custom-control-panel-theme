@@ -783,6 +783,8 @@ body {
 .taglib-header .header-title {
   margin: 0;
   font-weight: normal;
+  font-size: 18px;
+  color: #333333;
 }
 
 .portlet-enterprise-admin .form-section h3 {
