@@ -809,6 +809,15 @@ textarea,
   background-color: #f4f4f4;
 }
 
+.results-row a {
+  text-decoration: none;
+}
+.results-row a:hover {
+  text-decoration: underline;
+}
+.results-row td {
+  border-bottom: 1px solid #e4e4e4;
+}
 .results-row.alt td {
   background-color: #f9f9f9;
 }
@@ -817,13 +826,4 @@ textarea,
 }
 .results-row.hover td {
   background: #ffffcc;
-}
-.results-row td {
-  border-bottom: 1px solid #e4e4e4;
-}
-.results-row a {
-  text-decoration: none;
-}
-.results-row a:hover {
-  text-decoration: underline;
 }
