@@ -6,5 +6,5 @@ This is a work in progress, and will most probably remain dirty.
 To get this up and running
 
  * open a terminal window and navigate to the location of your Liferay Plugins SDK "theme"-folder: `cd ${PLUGINS_SDK_HOME}/themes`
- * inside the "themes"-directory, clone this repository by entering `git clone https://fk@github.com/fk/custom-control-panel-theme.git`
+ * inside the "themes"-directory, clone this repository by entering `git clone git@github.com:fk/custom-control-panel-theme.git`
  * modify the "build-common-theme.xml" of your Liferay Plugins SDK as described here: http://www.liferay.com/de/community/forums/-/message_boards/message/10803827
