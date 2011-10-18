@@ -1,0 +1,243 @@
+/* ---------- Base styles ----------
+
+body
+  background: #E3E8E8
+  font-size: 11px
+
+a
+  color: #369
+  text-decoration: underline
+  &:hover
+    color: #06C
+    text-decoration: none
+
+/* ---------- Main content body ----------
+
+#wrapper
+  background: transparent url(../images/common/body_bg.png) repeat-x scroll 0 0
+  padding-top: 20px
+
+#content
+  background: #FFF
+  border: 5px solid #FFF
+  margin: 20px auto
+  width: 976px
+
+html > .lfr-dockbar-pinned
+  padding-top: 2em
+
+/* ---------- Banner ----------
+
+#heading
+  margin: 0 auto
+  width: 976px
+  .company-title
+    margin: 0
+
+#banner #heading .logo
+  background: url(../images/common/company_logo.png) no-repeat 0 50%
+  color: #FFF
+  display: inline
+  font-size: 1em
+  height: auto
+  line-height: 1.1
+  padding-left: 35px
+  text-indent: 0
+  width: auto
+
+#skip-to-content
+  color: #FFF
+  &:focus
+    clip: auto
+    right: 1em
+    z-index: 1000
+
+/* ---------- Control panel ----------
+
+.lfr-ctrl-panel
+  width: 100%
+  h2
+    margin: 0
+  .panel-page-menu
+    background-color: #DBE1E3
+    background-image: url(../images/control_panel/panel_shadow.png)
+    background-position: 100% 0
+    background-repeat: repeat-y
+    .aui-column-content
+      padding: 0
+
+.ie6 .lfr-ctrl-panel .panel-page-menu
+  background-image: none
+
+.lfr-ctrl-panel
+  .portal-add-content
+    background: none
+    border-width: 0
+    .lfr-panel-container
+      background: none
+      border-width: 0
+  .user-greeting
+    display: none
+
+#panel-manage-my .lfr-panel-title span
+  background: transparent url(../images/common/admin.png) no-repeat 0 50%
+  padding-left: 25px
+
+#panel-manage-content .lfr-panel-title span
+  background: transparent url(../images/common/community_icon.png) no-repeat 0 50%
+  padding-left: 25px
+
+.lfr-ctrl-panel
+  .user-greeting .sign-out
+    color: #600
+    font-size: 10px
+    font-weight: normal
+    margin-left: 25px
+  .current-community
+    font-size: 14px
+    font-weight: normal
+    span
+      font-weight: bold
+  .panel-page-body.panel-page-frontpage
+    .lfr-panel-titlebar
+      margin-top: 0
+    .portlet-msg-info
+      margin-left: 15px
+  .panel-page-body-menu
+    background-color: #F3F5F5
+    margin-bottom: 10px
+    width: 100%
+  .panel-page-body-content
+    padding-left: 0
+  .panel-page-body-menu
+    .aui-column-last
+      text-align: right
+    .aui-column-content
+      line-height: 34px
+      padding: 0 15px
+  .lfr-add-content
+    background: url(../images/common/category_bg.png) repeat-x 0 0
+    margin: 0
+    .lfr-panel-titlebar
+      background: url(../images/arrows/05_down.png) no-repeat 5px 50%
+      font-size: 14px
+      span
+        display: block
+        line-height: 26px
+        margin: 0 5px 0 0
+  .lfr-panel-titlebar
+    font-size: 12px
+    font-weight: bold
+    line-height: 1.3
+    margin: 0
+    overflow: hidden
+  .lfr-panel-title
+    line-height: 1.5
+    padding-left: 5px
+
+.ie6 .lfr-ctrl-panel .panel-page-category .lfr-panel-titlebar
+  padding-bottom: 5px
+
+.lfr-ctrl-panel .panel-page-category
+  &.closed li ul
+    display: none
+  border-width: 0
+  .lfr-panel-titlebar
+    background: transparent url(../images/common/category_bg.png) repeat-x scroll 0 0
+    border-bottom-width: 0
+    margin: 0
+  .category-portlets a
+    color: #888
+    display: block
+    font-size: 12px
+    line-height: 22px
+    padding: 0 6px
+
+.ie6 .lfr-ctrl-panel .panel-page-category .category-portlets a
+  padding-top: 3px
+  padding-bottom: 3px
+  zoom: 1
+
+.lfr-ctrl-panel .panel-page-category .category-portlets a:hover
+  background-color: #4EA9DA
+  color: #FFF
+
+.js .lfr-ctrl-panel
+  .toggle-menu
+    background: url(../images/arrows/05_down.png) no-repeat scroll 5px 50%
+    display: block
+    float: left
+    height: 20px
+    padding: 0
+    width: 20px
+  .panel-page-category.closed .toggle-menu
+    background-image: url(../images/arrows/05_right.png)
+    display: block
+
+.lfr-ctrl-panel
+  .panel-page-category
+    &.selected a
+      color: #000
+    a img
+      margin-right: 3px
+    .selected-portlet
+      background: #bcc7ca url(../images/common/selected_portlet_bg.png) repeat-x 0 0
+      border-bottom: 1px solid #ECF0F1
+      a
+        background: transparent url(../images/common/selected_portlet_arrow.png) no-repeat right 50%
+        border: 1px solid #7A8487
+        border-left: none
+        border-right: none
+        color: #000
+        font-weight: bold
+  .portlet
+    border: none
+    padding: 0 0 10px 15px
+  .portlet-topper
+    background-color: #BCC7CA
+    border-bottom: none
+    margin: 0
+  .portlet-title
+    font-size: 18px
+    font-weight: 500
+    line-height: 34px
+    padding: 0 10px
+    img
+      cursor: pointer
+  .portlet-icons
+    display: none
+  .portlet-content
+    padding: 0
+    padding-top: 10px
+
+.lfr-title-scope-selector
+  background-color: #FFF
+  border: 1px solid #BBB
+  margin-left: 3em
+  padding: 0 0.5em
+
+/* ---------- Manage portal ----------
+
+.lfr-ctrl-panel
+  #panel-manage-portal
+    .lfr-panel-titlebar
+      background: url(../images/common/category_portal_bg.png) repeat-x 0 0
+    .selected-portlet a
+      background-color: #9BAA95
+  &.panel-manage-portal
+    .panel-page-menu
+      background-color: #DCE3DB
+    .portlet-topper
+      background-color: #9BAA95
+  #panel-manage-server
+    .lfr-panel-titlebar
+      background: url(../images/common/category_server_bg.png) repeat-x 0 0
+    .selected-portlet a
+      background-color: #CABCC9
+  &.panel-manage-server
+    .panel-page-menu
+      background-color: #E3DBE3
+    .portlet-topper
+      background-color: #CABCC9
+
+/* ---------- Manage server ----------

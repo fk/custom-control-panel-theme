@@ -1,0 +1,172 @@
+@import "partials/custom_common"
+@import "partials/custom"
+
+@import "compass/css3"
+@import "compass/css3/border-radius"
+@import "compass/css3/box-shadow"
+@import "compass/css3/transition"
+@import "compass/utilities/general/clearfix"
+
+$page      : #fff
+$copy      : #333
+$href      : #12c
+$grey      : #e4e4e4
+$grey_light: #f4f4f4
+$grey_mid  : #646464
+$grey_dark : #2d2d2d
+
+$default-box-shadow-color: rgba($copy, 0.2)
+
+@import "partials/dockbar"
+
+body,
+html
+  font-family: sans-serif
+
+body
+  background: $page
+
+#wrapper
+  background: $page
+  padding: 0
+
+#content
+  width: auto
+  border: 0
+  margin: 0
+
+#banner
+  display: none
+
+.site-breadcrumbs
+  padding: 0
+  background: $grey_light
+  margin: 0
+  border-bottom: 1px solid $grey
+  color: $grey_mid
+  font-size: 12px
+  ul
+    border: 0
+    background-color: transparent
+    @include border-radius(0)
+  li
+    &.first a
+      font-weight: normal
+    &.last a
+      font-weight: bold
+      color: $copy
+      font-size: 1em
+    span,
+    &.last span
+      background-image: url(../images/custom/breadcrumbs.png)
+      padding: 10px 15px 10px 5px
+
+.lfr-ctrl-panel
+  &.panel-manage-portal,
+  &.panel-manage-server
+    .portlet-topper
+      background: transparent
+    .panel-page-menu
+      background: $grey_light
+  .portlet
+    padding: 0
+  .portlet-topper
+    background: transparent
+    border-bottom: 1px solid $grey
+    @include border-radius(0)
+  .portlet-title
+    background: transparent
+    padding: 10px 20px
+  .portlet-content
+    padding: 20px
+  .panel-page-menu
+    background: $grey_light
+    .aui-column-content
+      padding: 20px
+      border-right: 1px solid $grey
+  .panel-page-category
+    .selected-portlet,
+    .lfr-panel-titlebar
+      background-image: none
+    .selected-portlet
+      border: 0
+      background-color: darken($grey,5%)
+      a
+        border: 0
+        background-image: none
+  #panel-manage-portal,
+  #panel-manage-server
+    .lfr-panel-titlebar
+      background-image: none
+    .selected-portlet a
+      background-color: darken($grey,5%)
+
+.lfr-panel-container
+  .lfr-extended.lfr-collapsible .lfr-panel-titlebar
+    border-top: 0
+  .lfr-panel
+    margin-bottom: 20px
+
+/* adjust AUI tabs
+.aui-tabview-list
+  border-radius: 0
+  border-color: $grey
+  a
+    text-decoration: none
+.aui-tabview-list,
+.aui-tabview-list-content
+  padding: 0
+
+.aui-tab-active
+  border-radius: 0
+  background: $grey
+  @include text-shadow(none)
+  a
+    color: $copy
+    @include text-shadow(none)
+  &:after
+    border-color: $grey transparent transparent
+
+.taglib-header
+  border-bottom: 1px solid $grey
+  .header-title
+    margin: 0
+    font-weight: normal
+
+.portlet-enterprise-admin .form-section h3
+  border-bottom: 1px solid $grey
+
+/* forms
+/* remove default gradient background image
+input
+  &[type="text"], &[type="password"]
+    background-image: none !important
+    background-color: $page
+
+select,
+textarea,
+.textarea
+  background-image: none !important
+  background-color: $page
+
+/* tables
+.results-header th,
+.results-header td,
+  background-color: $grey_light
+
+.results-row.alt td
+  background-color: lighten($grey_light,2%)
+
+.results-row td
+  border-bottom: 1px solid $grey
+
+.results-row.hover
+  a
+    text-decoration: underline
+  td
+    background: #ffc
+
+.results-row a
+  text-decoration: none
+  &:hover
+    text-decoration: underline

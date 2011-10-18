@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<project name="custom-control-panel-theme" basedir="." default="deploy">
+	<import file="../build-common-theme.xml" />
+
+	<property name="theme.parent" value="control_panel" />
+</project>
