@@ -1,4 +1,4 @@
-**An alternative "Control Panel"-theme for Liferay**
+**An alternative "Control Panel"-theme for Liferay**  
 featuring a flexible layout, improved UI and last but not least, SASS and Compass
 
 This is a work in progress, and will most probably remain dirty.
