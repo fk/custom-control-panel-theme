@@ -689,6 +689,17 @@ body {
   padding: 10px 20px 10px 5px;
 }
 
+.lfr-ctrl-panel .aui-w25 {
+  width: 250px;
+  position: absolute;
+}
+.lfr-ctrl-panel .aui-w75 {
+  width: auto;
+}
+.lfr-ctrl-panel .aui-column-last {
+  float: none;
+  margin-left: 250px;
+}
 .lfr-ctrl-panel.panel-manage-portal .portlet-topper, .lfr-ctrl-panel.panel-manage-server .portlet-topper {
   background: transparent;
 }
