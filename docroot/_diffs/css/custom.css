@@ -643,6 +643,10 @@ body {
   background: white;
 }
 
+a {
+  color: #1122cc;
+}
+
 #wrapper {
   background: white;
   padding: 0;
@@ -658,7 +662,15 @@ body {
   display: none;
 }
 
-.site-breadcrumbs {
+.aui-field-input-text.focus {
+  outline: 0;
+}
+
+.portlet-msg-info {
+  margin: 0 auto 15px;
+}
+
+#breadcrumbs {
   padding: 0;
   background: #f4f4f4;
   margin: 0;
@@ -666,7 +678,7 @@ body {
   color: #646464;
   font-size: 12px;
 }
-.site-breadcrumbs ul {
+#breadcrumbs ul {
   border: 0;
   background-color: transparent;
   -moz-border-radius: 0;
@@ -676,19 +688,40 @@ body {
   -khtml-border-radius: 0;
   border-radius: 0;
 }
-.site-breadcrumbs li.first a {
+#breadcrumbs li.first a {
+  color: #1122cc;
   font-weight: normal;
 }
-.site-breadcrumbs li.last a {
+#breadcrumbs li.last a {
   font-weight: bold;
   color: #333333;
   font-size: 1em;
 }
-.site-breadcrumbs li span, .site-breadcrumbs li.last span {
+#breadcrumbs li span, #breadcrumbs li.last span {
   background-image: url(../images/custom/breadcrumbs.png);
   padding: 10px 20px 10px 5px;
 }
 
+.taglib-icon .taglib-text {
+  text-decoration: none;
+}
+.taglib-icon:hover .taglib-text {
+  text-decoration: underline;
+}
+
+.taglib-header .header-back-to a {
+  font-weight: normal;
+}
+
+.lfr-ctrl-panel {
+  /* we need to reset the above for nested portlets */
+}
+.lfr-ctrl-panel .lfr-asset-column-actions-content {
+  background-color: transparent;
+}
+.lfr-ctrl-panel .lfr-asset-column-actions .lfr-asset-column-actions-content {
+  border: 0;
+}
 .lfr-ctrl-panel .aui-w25 {
   width: 250px;
   position: absolute;
@@ -699,6 +732,17 @@ body {
 .lfr-ctrl-panel .aui-column-last {
   float: none;
   margin-left: 250px;
+}
+.lfr-ctrl-panel .panel-page-body .aui-w25 {
+  width: 25%;
+  position: static;
+}
+.lfr-ctrl-panel .panel-page-body .aui-w75 {
+  width: 75%;
+}
+.lfr-ctrl-panel .panel-page-body .aui-column-last {
+  float: right;
+  margin-left: -5px;
 }
 .lfr-ctrl-panel.panel-manage-portal .portlet-topper, .lfr-ctrl-panel.panel-manage-server .portlet-topper {
   background: transparent;
@@ -732,6 +776,7 @@ body {
 .lfr-ctrl-panel .panel-page-menu .aui-column-content {
   padding: 20px;
   border-right: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
 }
 .lfr-ctrl-panel .panel-page-category .selected-portlet,
 .lfr-ctrl-panel .panel-page-category .lfr-panel-titlebar {
@@ -757,6 +802,10 @@ body {
   background-color: #d7d7d7;
 }
 
+.lfr-form-row {
+  border-bottom: 1px solid #e4e4e4;
+}
+
 .lfr-panel-container .lfr-extended.lfr-collapsible .lfr-panel-titlebar {
   border-top: 0;
 }
@@ -779,7 +828,12 @@ body {
   padding: 0;
 }
 
+.aui-tab {
+  font-weight: normal;
+}
+
 .aui-tab-active {
+  color: #333333;
   border-radius: 0;
   background: #e4e4e4;
   text-shadow: none;
@@ -787,7 +841,6 @@ body {
 .aui-tab-active a {
   color: #333333;
   text-shadow: none;
-  font-weight: bold;
 }
 .aui-tab-active:after {
   border-color: #e4e4e4 transparent transparent;
@@ -805,6 +858,17 @@ body {
 
 .portlet-enterprise-admin .form-section h3 {
   border-bottom: 1px solid #e4e4e4;
+}
+
+.portlet-communities .lfr-current-theme,
+.portlet-enterprise-admin .lfr-current-theme {
+  background: transparent;
+  border: 0;
+}
+.portlet-communities .lfr-theme-list h3,
+.portlet-enterprise-admin .lfr-theme-list h3 {
+  background: transparent;
+  padding: 0;
 }
 
 /* forms */
@@ -827,12 +891,15 @@ textarea,
   background-color: #f4f4f4;
 }
 
-.results-row a {
+.results-row a,
+.results-header a {
   text-decoration: none;
 }
-.results-row a:hover {
+.results-row a:hover,
+.results-header a:hover {
   text-decoration: underline;
 }
+
 .results-row td {
   border-bottom: 1px solid #e4e4e4;
 }
@@ -843,5 +910,5 @@ textarea,
   text-decoration: underline;
 }
 .results-row.hover td {
-  background: #ffffcc;
+  background: #ffffdd;
 }

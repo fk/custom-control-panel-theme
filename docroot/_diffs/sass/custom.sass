@@ -26,6 +26,9 @@ html
 body
   background: $page
 
+a
+  color: $href
+
 #wrapper
   background: $page
   padding: 0
@@ -38,7 +41,13 @@ body
 #banner
   display: none
 
-.site-breadcrumbs
+.aui-field-input-text.focus
+  outline: 0
+
+.portlet-msg-info
+  margin: 0 auto 15px
+
+#breadcrumbs
   padding: 0
   background: $grey_light
   margin: 0
@@ -51,6 +60,7 @@ body
     @include border-radius(0)
   li
     &.first a
+      color: $href
       font-weight: normal
     &.last a
       font-weight: bold
@@ -61,7 +71,21 @@ body
       background-image: url(../images/custom/breadcrumbs.png)
       padding: 10px 20px 10px 5px
 
+.taglib-icon
+  .taglib-text
+    text-decoration: none
+  &:hover
+    .taglib-text
+      text-decoration: underline
+
+.taglib-header .header-back-to a
+  font-weight: normal
+
 .lfr-ctrl-panel
+  .lfr-asset-column-actions-content
+    background-color: transparent
+  .lfr-asset-column-actions .lfr-asset-column-actions-content
+    border: 0
   .aui-w25
     width: 250px
     position: absolute
@@ -70,6 +94,16 @@ body
   .aui-column-last
     float: none
     margin-left: 250px
+  /* we need to reset the above for nested portlets
+  .panel-page-body
+    .aui-w25
+      width: 25%
+      position: static
+    .aui-w75
+      width: 75%
+    .aui-column-last
+      float: right
+      margin-left: -5px
   &.panel-manage-portal,
   &.panel-manage-server
     .portlet-topper
@@ -92,6 +126,7 @@ body
     .aui-column-content
       padding: 20px
       border-right: 1px solid $grey
+      border-bottom: 1px solid $grey
   .panel-page-category
     .selected-portlet,
     .lfr-panel-titlebar
@@ -104,13 +139,15 @@ body
         background-image: none
     .category-portlets a img[style]
       background-image: url(../images/custom/sprite.png) !important
-    
   #panel-manage-portal,
   #panel-manage-server
     .lfr-panel-titlebar
       background-image: none
     .selected-portlet a
       background-color: darken($grey,5%)
+
+.lfr-form-row
+  border-bottom: 1px solid $grey
 
 .lfr-panel-container
   .lfr-extended.lfr-collapsible .lfr-panel-titlebar
@@ -130,14 +167,17 @@ body
 .aui-tabview-list-content
   padding: 0
 
+.aui-tab
+  font-weight: normal
+
 .aui-tab-active
+  color: $copy
   border-radius: 0
   background: $grey
   @include text-shadow(none)
   a
     color: $copy
     @include text-shadow(none)
-    font-weight: bold
   &:after
     border-color: $grey transparent transparent
 
@@ -149,8 +189,18 @@ body
     font-size: 18px
     color: $copy
 
-.portlet-enterprise-admin .form-section h3
-  border-bottom: 1px solid $grey
+.portlet-enterprise-admin
+  .form-section h3
+    border-bottom: 1px solid $grey
+
+.portlet-communities,
+.portlet-enterprise-admin
+  .lfr-current-theme
+    background: transparent
+    border: 0
+  .lfr-theme-list h3
+    background: transparent
+    padding: 0
 
 /* forms
 /* remove default gradient background image
@@ -170,11 +220,13 @@ textarea,
 .results-header th,
 .results-header td,
   background-color: $grey_light
-.results-row
+.results-row,
+.results-header
   a
     text-decoration: none
     &:hover
       text-decoration: underline
+.results-row
   td
     border-bottom: 1px solid $grey
   &.alt td
@@ -183,4 +235,4 @@ textarea,
     a
       text-decoration: underline
     td
-      background: #ffc
+      background: #ffd
