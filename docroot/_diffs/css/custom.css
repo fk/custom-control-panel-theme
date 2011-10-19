@@ -634,6 +634,10 @@ html > .lfr-dockbar-pinned {
   border: 0;
 }
 
+.my-places-menu {
+  max-width: 250px;
+}
+
 body,
 html {
   font-family: sans-serif;
