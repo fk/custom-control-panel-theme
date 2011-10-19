@@ -723,7 +723,7 @@ a {
   border: 0;
 }
 .lfr-ctrl-panel .aui-w25 {
-  width: 250px;
+  width: 275px;
   position: absolute;
 }
 .lfr-ctrl-panel .aui-w75 {
@@ -731,7 +731,7 @@ a {
 }
 .lfr-ctrl-panel .aui-column-last {
   float: none;
-  margin-left: 250px;
+  margin-left: 275px;
 }
 .lfr-ctrl-panel .panel-page-body .aui-w25 {
   width: 25%;
