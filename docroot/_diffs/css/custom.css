@@ -951,6 +951,11 @@ a {
   border-left: 1px solid #e4e4e4;
 }
 
+.aui-menu-content a, .lfr-menu-list li a, .lfr-actions .lfr-trigger, .lfr-actions .lfr-trigger strong {
+  font-weight: normal;
+  text-shadow: none;
+}
+
 .lfr-asset-column-actions .lfr-asset-summary {
   margin-bottom: 0;
   padding-bottom: 20px;
