@@ -524,6 +524,13 @@ html > .lfr-dockbar-pinned {
   text-align: right;
 }
 
+.back-link a {
+  text-decoration: none;
+}
+.back-link a:hover {
+  text-decoration: underline;
+}
+
 .my-places-menu .current-site {
   border: 0;
 }
@@ -634,6 +641,25 @@ html > .lfr-dockbar-pinned {
   border: 0;
 }
 
+.lfr-asset-column-actions .lfr-asset-summary {
+  text-align: left;
+}
+
+.lfr-asset-name {
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+.portlet-toolbar {
+  background-color: #f4f4f4;
+  padding: 5px;
+}
+
+.aui-search-bar {
+  display: block;
+  margin-bottom: 5px;
+}
+
 .my-places-menu {
   max-width: 250px;
 }
@@ -641,6 +667,7 @@ html > .lfr-dockbar-pinned {
 body,
 html {
   font-family: sans-serif;
+  font-size: 12px;
 }
 
 body {
@@ -786,13 +813,41 @@ a {
 .lfr-ctrl-panel .panel-page-category .lfr-panel-titlebar {
   background-image: none;
 }
+.lfr-ctrl-panel .panel-page-category .category-portlets a {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+}
+.lfr-ctrl-panel .panel-page-category .category-portlets a:hover {
+  background-color: #d7d7d7;
+  color: black;
+  -moz-box-shadow: white 0 1px 1px;
+  -webkit-box-shadow: white 0 1px 1px;
+  -o-box-shadow: white 0 1px 1px;
+  box-shadow: white 0 1px 1px;
+}
 .lfr-ctrl-panel .panel-page-category .selected-portlet {
   border: 0;
   background-color: #d7d7d7;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: white 0 1px 1px;
+  -webkit-box-shadow: white 0 1px 1px;
+  -o-box-shadow: white 0 1px 1px;
+  box-shadow: white 0 1px 1px;
 }
 .lfr-ctrl-panel .panel-page-category .selected-portlet a {
   border: 0;
   background-image: none;
+  color: #646464;
+  font-weight: normal;
 }
 .lfr-ctrl-panel .panel-page-category .category-portlets a img[style] {
   background-image: url(../images/custom/sprite.png) !important;
@@ -804,6 +859,21 @@ a {
 .lfr-ctrl-panel #panel-manage-portal .selected-portlet a,
 .lfr-ctrl-panel #panel-manage-server .selected-portlet a {
   background-color: #d7d7d7;
+}
+
+.portlet-boundary .top-links-container {
+  margin-bottom: 10px;
+}
+
+.portlet-boundary .top-links {
+  /* pushing down the text node would be nicer */
+}
+.portlet-boundary .top-links .top-link {
+  border-color: #e4e4e4;
+}
+.portlet-boundary .top-links .top-links-navigation {
+  position: relative;
+  top: 4px;
 }
 
 .lfr-form-row {
@@ -875,6 +945,30 @@ a {
   padding: 0;
 }
 
+.aui-menu-content, .lfr-menu-list ul {
+  background: white;
+  border: 0;
+  border-left: 1px solid #e4e4e4;
+}
+
+.lfr-asset-column-actions .lfr-asset-summary {
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  border-left: 1px solid #e4e4e4;
+}
+
+.lfr-ctrl-panel .panel-page-category a img {
+  margin-right: 6px;
+}
+
+.lfr-panel.lfr-collapsed .lfr-panel-titlebar .lfr-panel-button {
+  background-image: url(../images/custom/panel_header_toggler_open.png);
+}
+
+.lfr-panel-titlebar .lfr-panel-button {
+  background-image: url(../images/custom/panel_header_toggler_close.png);
+}
+
 /* forms */
 /* remove default gradient background image */
 input[type="text"], input[type="password"] {
@@ -887,6 +981,64 @@ textarea,
 .textarea {
   background-image: none !important;
   background-color: white;
+}
+
+.aui-tabview-list,
+.aui-tab-active,
+body > .lfr-menu-list ul,
+.lfr-actions,
+.aui-dialog-content,
+.aui-dialog .aui-widget-hd,
+.modify-pages .delete-tab,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+button {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+}
+
+input.focus, textarea.focus, .ie6 input.focus, .ie6 textarea.focus {
+  border: 1px solid #1122cc !important;
+}
+
+input[type="submit"], input[type="button"], input[type="reset"], button, .lfr-actions, .lfr-actions ul {
+  font-weight: normal;
+}
+
+input[type="submit"], input[type="button"], input[type="reset"] {
+  -moz-box-shadow: rgba(51, 51, 51, 0.3) 0px 1px 3px;
+  -webkit-box-shadow: rgba(51, 51, 51, 0.3) 0px 1px 3px;
+  -o-box-shadow: rgba(51, 51, 51, 0.3) 0px 1px 3px;
+  box-shadow: rgba(51, 51, 51, 0.3) 0px 1px 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover {
+  background: white;
+  border-color: #aaaaaa;
+  color: black;
+  -moz-box-shadow: rgba(51, 51, 51, 0.5) 0px 1px 4px;
+  -webkit-box-shadow: rgba(51, 51, 51, 0.5) 0px 1px 4px;
+  -o-box-shadow: rgba(51, 51, 51, 0.5) 0px 1px 4px;
+  box-shadow: rgba(51, 51, 51, 0.5) 0px 1px 4px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(30%, #f4f4f4), color-stop(90%, #e4e4e4), color-stop(100%, #e4e4e4));
+  background-image: -webkit-linear-gradient(#ffffff, #f4f4f4 30%, #e4e4e4 90%, #e4e4e4);
+  background-image: -moz-linear-gradient(#ffffff, #f4f4f4 30%, #e4e4e4 90%, #e4e4e4);
+  background-image: -o-linear-gradient(#ffffff, #f4f4f4 30%, #e4e4e4 90%, #e4e4e4);
+  background-image: -ms-linear-gradient(#ffffff, #f4f4f4 30%, #e4e4e4 90%, #e4e4e4);
+  background-image: linear-gradient(#ffffff, #f4f4f4 30%, #e4e4e4 90%, #e4e4e4);
+}
+input[type="submit"]:active, input[type="button"]:active, input[type="reset"]:active {
+  -moz-box-shadow: rgba(51, 51, 51, 0.3) 0 0 3px 1px inset;
+  -webkit-box-shadow: rgba(51, 51, 51, 0.3) 0 0 3px 1px inset;
+  -o-box-shadow: rgba(51, 51, 51, 0.3) 0 0 3px 1px inset;
+  box-shadow: rgba(51, 51, 51, 0.3) 0 0 3px 1px inset;
 }
 
 /* tables */
