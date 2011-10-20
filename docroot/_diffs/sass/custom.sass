@@ -296,9 +296,11 @@ input[type="submit"], input[type="button"], input[type="reset"], button, .lfr-ac
   font-weight: normal
 
 input[type="submit"], input[type="button"], input[type="reset"]
-  +box-shadow(rgba($copy, 0.3) 0px 1px 3px)
   padding-left: 10px
   padding-right: 10px
+  +box-shadow(rgba($copy, 0.3) 0px 1px 3px)
+  +transition-duration(.2s)
+  +transition-timing-function(ease)
 
 input[type="submit"], input[type="button"], input[type="reset"]
   &:hover
@@ -309,6 +311,7 @@ input[type="submit"], input[type="button"], input[type="reset"]
     +background-image(linear-gradient($page, $grey_light 30%, $grey 90%, $grey))
   &:active
     +box-shadow(rgba($copy, .3) 0 0 3px 1px inset)
+    +background-image(linear-gradient($grey_light, $grey 30%, $grey))
 
 /* tables
 .results-header th,
