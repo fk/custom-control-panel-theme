@@ -956,9 +956,22 @@ a {
   text-shadow: none;
 }
 
-.aui-state-default {
+.aui-overlaycontextpanel-content {
   background: rgba(255, 255, 255, 0.9);
   border-color: #e4e4e4;
+}
+
+.aui-state-default {
+  border-color: #e4e4e4;
+}
+
+.aui-overlaycontextpanel-arrow-tl .aui-overlaycontextpanel-pointer-inner {
+  border-right: 10px dotted transparent;
+  left: 1px;
+}
+
+.aui-overlaycontextpanel-arrow-tl .aui-overlaycontextpanel-pointer {
+  border-right: 12px dotted transparent;
 }
 
 .aui-overlaycontextpanel-arrow-tl .aui-overlaycontextpanel-pointer-inner[style] {
