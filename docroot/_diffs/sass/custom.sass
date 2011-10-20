@@ -19,12 +19,28 @@ $default-box-shadow-color: rgba($copy, 0.2)
 
 @import "partials/dockbar"
 
+.lfr-asset-column-actions .lfr-asset-summary
+  text-align: left
+
+.lfr-asset-name
+  padding-left: 30px
+  padding-top: 20px
+
+.portlet-toolbar
+  background-color: $grey_light
+  padding: 5px
+
+.aui-search-bar
+  display: block
+  margin-bottom: 5px
+
 .my-places-menu
   max-width: 250px
 
 body,
 html
   font-family: sans-serif
+  font-size: 12px
 
 body
   background: $page
@@ -60,7 +76,7 @@ a
   ul
     border: 0
     background-color: transparent
-    @include border-radius(0)
+    +border-radius(0)
   li
     &.first a
       color: $href
@@ -118,7 +134,7 @@ a
   .portlet-topper
     background: transparent
     border-bottom: 1px solid $grey
-    @include border-radius(0)
+    +border-radius(0)
   .portlet-title
     background: transparent
     padding: 10px 20px
@@ -134,12 +150,22 @@ a
     .selected-portlet,
     .lfr-panel-titlebar
       background-image: none
+    .category-portlets a
+      +border-radius(2px)
+      &:hover
+        background-color: darken($grey,5%)
+        color: #000
+        +box-shadow(rgba($page,1) 0 1px 1px)
     .selected-portlet
       border: 0
       background-color: darken($grey,5%)
+      +border-radius(2px)
+      +box-shadow(rgba($page,1) 0 1px 1px)
       a
         border: 0
         background-image: none
+        color: $grey_mid
+        font-weight: normal
     .category-portlets a img[style]
       background-image: url(../images/custom/sprite.png) !important
   #panel-manage-portal,
@@ -148,6 +174,17 @@ a
       background-image: none
     .selected-portlet a
       background-color: darken($grey,5%)
+
+.portlet-boundary .top-links-container
+  margin-bottom: 10px
+
+.portlet-boundary .top-links
+  .top-link
+    border-color: $grey
+  /* pushing down the text node would be nicer
+  .top-links-navigation
+    position: relative
+    top: 4px
 
 .lfr-form-row
   border-bottom: 1px solid $grey
@@ -177,10 +214,10 @@ a
   color: $copy
   border-radius: 0
   background: $grey
-  @include text-shadow(none)
+  +text-shadow(none)
   a
     color: $copy
-    @include text-shadow(none)
+    +text-shadow(none)
   &:after
     border-color: $grey transparent transparent
 
@@ -205,6 +242,25 @@ a
     background: transparent
     padding: 0
 
+.aui-menu-content, .lfr-menu-list ul
+  background: $page
+  border: 0
+  border-left: 1px solid $grey
+
+.lfr-asset-column-actions .lfr-asset-summary
+  margin-bottom: 0
+  padding-bottom: 20px
+  border-left: 1px solid $grey
+
+.lfr-ctrl-panel .panel-page-category a img
+  margin-right: 6px
+
+.lfr-panel.lfr-collapsed .lfr-panel-titlebar .lfr-panel-button
+  background-image: url(../images/custom/panel_header_toggler_open.png)
+
+.lfr-panel-titlebar .lfr-panel-button
+  background-image: url(../images/custom/panel_header_toggler_close.png)
+
 /* forms
 /* remove default gradient background image
 input
@@ -218,6 +274,41 @@ textarea,
 .textarea
   background-image: none !important
   background-color: $page
+
+.aui-tabview-list,
+.aui-tab-active,
+body > .lfr-menu-list ul,
+.lfr-actions,
+.aui-dialog-content,
+.aui-dialog .aui-widget-hd,
+.modify-pages .delete-tab,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+button
+  +border-radius(2px)
+
+input,textarea,.ie6 input,.ie6 textarea
+  &.focus
+    border: 1px solid $href !important
+
+input[type="submit"], input[type="button"], input[type="reset"], button, .lfr-actions, .lfr-actions ul
+  font-weight: normal
+
+input[type="submit"], input[type="button"], input[type="reset"]
+  +box-shadow(rgba($copy, 0.3) 0px 1px 3px)
+  padding-left: 10px
+  padding-right: 10px
+
+input[type="submit"], input[type="button"], input[type="reset"]
+  &:hover
+    background: #fff
+    border-color: #aaa
+    color: #000
+    +box-shadow(rgba($copy, .5) 0px 1px 4px)
+    +background-image(linear-gradient($page, $grey_light 30%, $grey 90%, $grey))
+  &:active
+    +box-shadow(rgba($copy, .3) 0 0 3px 1px inset)
 
 /* tables
 .results-header th,
