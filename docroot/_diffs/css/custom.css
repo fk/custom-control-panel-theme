@@ -805,7 +805,7 @@ a {
   background: #f4f4f4;
 }
 .lfr-ctrl-panel .panel-page-menu .aui-column-content {
-  padding: 20px;
+  padding: 20px 20px 0;
   border-right: 1px solid #e4e4e4;
   border-bottom: 1px solid #e4e4e4;
 }
@@ -885,6 +885,21 @@ a {
 }
 .lfr-panel-container .lfr-panel {
   margin-bottom: 20px;
+}
+.lfr-panel-container .lfr-panel.lfr-extended {
+  border-bottom: 1px solid #e4e4e4;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.lfr-panel-container .lfr-panel.lfr-extended.lfr-collapsed {
+  border-bottom: 0;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+}
+
+.lfr-panel.lfr-component.panel-page-category.lfr-collapsible.lfr-extended:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
 }
 
 /* adjust AUI tabs */

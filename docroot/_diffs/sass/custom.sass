@@ -143,7 +143,7 @@ a
   .panel-page-menu
     background: $grey_light
     .aui-column-content
-      padding: 20px
+      padding: 20px 20px 0
       border-right: 1px solid $grey
       border-bottom: 1px solid $grey
   .panel-page-category
@@ -194,6 +194,19 @@ a
     border-top: 0
   .lfr-panel
     margin-bottom: 20px
+    &.lfr-extended
+      border-bottom: 1px solid $grey
+      padding-bottom: 20px
+      margin-bottom: 20px
+      &.lfr-collapsed
+        border-bottom: 0
+        margin-bottom: 20px
+        padding-bottom: 0
+
+.lfr-panel.lfr-component.panel-page-category.lfr-collapsible.lfr-extended
+  &:last-child
+    border-bottom: 0
+    padding-bottom: 0
 
 /* adjust AUI tabs
 .aui-tabview-list
