@@ -1,3 +1,4 @@
+/* work around the "occupied" custom.css of the Liferay Core "Control Panel"-theme
 @import "partials/custom_common"
 @import "partials/custom"
 
@@ -7,17 +8,68 @@
 @import "compass/css3/transition"
 @import "compass/utilities/general/clearfix"
 
-$page      : #fff
-$copy      : #333
-$href      : #12c
-$grey      : #e4e4e4
-$grey_light: #f4f4f4
-$grey_mid  : #646464
-$grey_dark : #2d2d2d
+/* color variables
+$page           : #fff
+$copy           : #333
+$href           : #333
+$hover          : #12c
+$grey           : #e4e4e4
+$grey_light     : #f4f4f4
+$grey_mid       : #646464
+$grey_dark      : #2d2d2d
+$note           : #DDF4FB
+$note_border    : #C6EDF9
+$error          : #FDDFDE
+$error_border   : #FBC7C6
+$success        : #D1EED1
+$success_border : #BFE7BF
 
+/* compass defaults
 $default-box-shadow-color: rgba($copy, 0.2)
 
+/* theme modules
 @import "partials/dockbar"
+
+/* expandable panels
+.portlet-journal .lfr-panel-basic .lfr-panel-title
+  border: 0
+  span
+    background: transparent
+
+.portlet-journal .lfr-panel-basic .lfr-panel-content
+  background-color: $grey_light
+
+.lfr-asset-column-details .lfr-asset-icon
+  border-color: $grey
+
+/* calmer backgrounds for error, info and success messages
+.portlet-msg-error
+  background-color: $error
+  border-color: $error_border
+
+.portlet-msg-info
+  background-color: $note
+  border-color: $note_border
+
+.portlet-msg-success
+  background-color: $success
+  border-color: $success_border
+
+/* prevent theme thumbnail from breaking when the title is only slightly longer
+.portlet-communities .theme-entry,
+.portlet-enterprise-admin .theme-entry
+  width: 140px
+
+/* consistent border colors
+.portlet-communities .lfr-current-theme .theme-title,
+.portlet-enterprise-admin .lfr-current-theme .theme-title
+  border-color: $grey
+
+.portlet-communities .theme-entry,
+.portlet-communities .lfr-current-theme .theme-screenshot,
+.portlet-enterprise-admin .theme-entry,
+.portlet-enterprise-admin .lfr-current-theme .theme-screenshot
+  border: 1px solid $grey
 
 .lfr-asset-column-actions .lfr-asset-summary
   text-align: left
@@ -41,12 +93,12 @@ body,
 html
   font-family: sans-serif
   font-size: 12px
-
-body
   background: $page
 
 a
   color: $href
+  &:hover
+    color: $hover
 
 #wrapper
   background: $page
@@ -66,6 +118,7 @@ a
 .portlet-msg-info
   margin: 0 auto 15px
 
+/* breadcrumbs
 #breadcrumbs
   padding: 0
   background: $grey_light
@@ -81,15 +134,20 @@ a
     &.first a
       color: $href
       font-weight: normal
+      &:hover
+        color: $hover
     &.last a
       font-weight: bold
       color: $copy
       font-size: 1em
+      &:hover
+        color: $hover
     span,
     &.last span
       background-image: url(../images/custom/breadcrumbs.png)
       padding: 10px 20px 10px 5px
 
+/* navigation bars in portlets
 .taglib-icon
   .taglib-text
     text-decoration: none
@@ -100,6 +158,7 @@ a
 .taglib-header .header-back-to a
   font-weight: normal
 
+/* grid/columns
 .lfr-ctrl-panel
   .lfr-asset-column-actions-content
     background-color: transparent
@@ -271,6 +330,7 @@ a
 .aui-state-default
   border-color: $grey
 
+/* the "help"-bubble/tooltip
 .aui-overlaycontextpanel-arrow-tl .aui-overlaycontextpanel-pointer-inner
   border-right: 10px dotted transparent
   left: 1px
@@ -289,6 +349,7 @@ a
 .lfr-ctrl-panel .panel-page-category a img
   margin-right: 6px
 
+/* calmer sidebar panel collapse/expand-buttons
 .lfr-panel.lfr-collapsed .lfr-panel-titlebar .lfr-panel-button
   background-image: url(../images/custom/panel_header_toggler_open.png)
 
@@ -302,13 +363,13 @@ input
   &[type="password"]
     background-image: none !important
     background-color: $page
-
 select,
 textarea,
 .textarea
   background-image: none !important
   background-color: $page
 
+/* less round buttons
 .aui-tabview-list,
 .aui-tab-active,
 body > .lfr-menu-list ul,
@@ -322,9 +383,12 @@ input[type="reset"],
 button
   +border-radius(2px)
 
-input,textarea,.ie6 input,.ie6 textarea
+input, textarea, .ie6 input, .ie6 textarea
+  +transition-duration(.2s)
+  +transition-timing-function(ease)
   &.focus
-    border: 1px solid $href !important
+    border: 1px solid $hover !important
+    +box-shadow(rgba($hover, .3) , 0, 0, 7px, 0)
 
 input[type="submit"], input[type="button"], input[type="reset"], button, .lfr-actions, .lfr-actions ul
   font-weight: normal
@@ -336,7 +400,9 @@ input[type="submit"], input[type="button"], input[type="reset"]
   +transition-duration(.2s)
   +transition-timing-function(ease)
 
-input[type="submit"], input[type="button"], input[type="reset"]
+input[type="submit"],
+input[type="button"],
+input[type="reset"]
   &:hover
     background: #fff
     border-color: #aaa
@@ -351,6 +417,9 @@ input[type="submit"], input[type="button"], input[type="reset"]
 .results-header th,
 .results-header td,
   background-color: $grey_light
+.results-header,
+.results-header th
+  background-color: transparent
 .results-row,
 .results-header
   a
@@ -360,10 +429,14 @@ input[type="submit"], input[type="button"], input[type="reset"]
 .results-row
   td
     border-bottom: 1px solid $grey
-  &.alt td
     background-color: lighten($grey_light,2%)
+  &.alt td
+    background-color: $page
   &.hover
     a
       text-decoration: underline
     td
       background: #ffd
+
+.taglib-page-iterator .search-results
+  color: lighten($grey_mid,35%)

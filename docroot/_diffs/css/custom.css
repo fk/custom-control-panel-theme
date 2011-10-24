@@ -1,3 +1,4 @@
+/* work around the "occupied" custom.css of the Liferay Core "Control Panel"-theme */
 /* ---------- Breadcrumbs ---------- */
 .breadcrumbs {
   margin-bottom: 1.5em;
@@ -436,6 +437,9 @@ html > .lfr-dockbar-pinned {
 }
 
 /* ---------- Manage server ---------- */
+/* color variables */
+/* compass defaults */
+/* theme modules */
 /* custom dockbar */
 .dockbar {
   background: #2d2d2d;
@@ -512,7 +516,7 @@ html > .lfr-dockbar-pinned {
 .dockbar .aui-menu-content li a.aui-focus,
 .dockbar .lfr-menu-list ul a.aui-focus,
 .dockbar .lfr-menu-expanded li a:focus {
-  background-color: #1122cc;
+  background-color: #333333;
   color: white;
   text-shadow: none;
 }
@@ -641,6 +645,57 @@ html > .lfr-dockbar-pinned {
   border: 0;
 }
 
+/* expandable panels */
+.portlet-journal .lfr-panel-basic .lfr-panel-title {
+  border: 0;
+}
+.portlet-journal .lfr-panel-basic .lfr-panel-title span {
+  background: transparent;
+}
+
+.portlet-journal .lfr-panel-basic .lfr-panel-content {
+  background-color: #f4f4f4;
+}
+
+.lfr-asset-column-details .lfr-asset-icon {
+  border-color: #e4e4e4;
+}
+
+/* calmer backgrounds for error, info and success messages */
+.portlet-msg-error {
+  background-color: #fddfde;
+  border-color: #fbc7c6;
+}
+
+.portlet-msg-info {
+  background-color: #ddf4fb;
+  border-color: #c6edf9;
+}
+
+.portlet-msg-success {
+  background-color: #d1eed1;
+  border-color: #bfe7bf;
+}
+
+/* prevent theme thumbnail from breaking when the title is only slightly longer */
+.portlet-communities .theme-entry,
+.portlet-enterprise-admin .theme-entry {
+  width: 140px;
+}
+
+/* consistent border colors */
+.portlet-communities .lfr-current-theme .theme-title,
+.portlet-enterprise-admin .lfr-current-theme .theme-title {
+  border-color: #e4e4e4;
+}
+
+.portlet-communities .theme-entry,
+.portlet-communities .lfr-current-theme .theme-screenshot,
+.portlet-enterprise-admin .theme-entry,
+.portlet-enterprise-admin .lfr-current-theme .theme-screenshot {
+  border: 1px solid #e4e4e4;
+}
+
 .lfr-asset-column-actions .lfr-asset-summary {
   text-align: left;
 }
@@ -668,13 +723,13 @@ body,
 html {
   font-family: sans-serif;
   font-size: 12px;
-}
-
-body {
   background: white;
 }
 
 a {
+  color: #333333;
+}
+a:hover {
   color: #1122cc;
 }
 
@@ -701,6 +756,7 @@ a {
   margin: 0 auto 15px;
 }
 
+/* breadcrumbs */
 #breadcrumbs {
   padding: 0;
   background: #f4f4f4;
@@ -720,19 +776,26 @@ a {
   border-radius: 0;
 }
 #breadcrumbs li.first a {
-  color: #1122cc;
+  color: #333333;
   font-weight: normal;
+}
+#breadcrumbs li.first a:hover {
+  color: #1122cc;
 }
 #breadcrumbs li.last a {
   font-weight: bold;
   color: #333333;
   font-size: 1em;
 }
+#breadcrumbs li.last a:hover {
+  color: #1122cc;
+}
 #breadcrumbs li span, #breadcrumbs li.last span {
   background-image: url(../images/custom/breadcrumbs.png);
   padding: 10px 20px 10px 5px;
 }
 
+/* navigation bars in portlets */
 .taglib-icon .taglib-text {
   text-decoration: none;
 }
@@ -744,6 +807,7 @@ a {
   font-weight: normal;
 }
 
+/* grid/columns */
 .lfr-ctrl-panel {
   /* we need to reset the above for nested portlets */
 }
@@ -980,6 +1044,7 @@ a {
   border-color: #e4e4e4;
 }
 
+/* the "help"-bubble/tooltip */
 .aui-overlaycontextpanel-arrow-tl .aui-overlaycontextpanel-pointer-inner {
   border-right: 10px dotted transparent;
   left: 1px;
@@ -1003,6 +1068,7 @@ a {
   margin-right: 6px;
 }
 
+/* calmer sidebar panel collapse/expand-buttons */
 .lfr-panel.lfr-collapsed .lfr-panel-titlebar .lfr-panel-button {
   background-image: url(../images/custom/panel_header_toggler_open.png);
 }
@@ -1025,6 +1091,7 @@ textarea,
   background-color: white;
 }
 
+/* less round buttons */
 .aui-tabview-list,
 .aui-tab-active,
 body > .lfr-menu-list ul,
@@ -1044,8 +1111,22 @@ button {
   border-radius: 2px;
 }
 
+input, textarea, .ie6 input, .ie6 textarea {
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
 input.focus, textarea.focus, .ie6 input.focus, .ie6 textarea.focus {
   border: 1px solid #1122cc !important;
+  -moz-box-shadow: 0 0 7px 0 rgba(17, 34, 204, 0.3);
+  -webkit-box-shadow: 0 0 7px 0 rgba(17, 34, 204, 0.3);
+  -o-box-shadow: 0 0 7px 0 rgba(17, 34, 204, 0.3);
+  box-shadow: 0 0 7px 0 rgba(17, 34, 204, 0.3);
 }
 
 input[type="submit"], input[type="button"], input[type="reset"], button, .lfr-actions, .lfr-actions ul {
@@ -1069,7 +1150,9 @@ input[type="submit"], input[type="button"], input[type="reset"] {
   transition-timing-function: ease;
 }
 
-input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover {
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover {
   background: white;
   border-color: #aaaaaa;
   color: black;
@@ -1084,7 +1167,9 @@ input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hove
   background-image: -ms-linear-gradient(#ffffff, #f4f4f4 30%, #e4e4e4 90%, #e4e4e4);
   background-image: linear-gradient(#ffffff, #f4f4f4 30%, #e4e4e4 90%, #e4e4e4);
 }
-input[type="submit"]:active, input[type="button"]:active, input[type="reset"]:active {
+input[type="submit"]:active,
+input[type="button"]:active,
+input[type="reset"]:active {
   -moz-box-shadow: rgba(51, 51, 51, 0.3) 0 0 3px 1px inset;
   -webkit-box-shadow: rgba(51, 51, 51, 0.3) 0 0 3px 1px inset;
   -o-box-shadow: rgba(51, 51, 51, 0.3) 0 0 3px 1px inset;
@@ -1103,6 +1188,11 @@ input[type="submit"]:active, input[type="button"]:active, input[type="reset"]:ac
   background-color: #f4f4f4;
 }
 
+.results-header,
+.results-header th {
+  background-color: transparent;
+}
+
 .results-row a,
 .results-header a {
   text-decoration: none;
@@ -1114,13 +1204,18 @@ input[type="submit"]:active, input[type="button"]:active, input[type="reset"]:ac
 
 .results-row td {
   border-bottom: 1px solid #e4e4e4;
+  background-color: #f9f9f9;
 }
 .results-row.alt td {
-  background-color: #f9f9f9;
+  background-color: white;
 }
 .results-row.hover a {
   text-decoration: underline;
 }
 .results-row.hover td {
   background: #ffffdd;
+}
+
+.taglib-page-iterator .search-results {
+  color: #bdbdbd;
 }
