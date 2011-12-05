@@ -2,8 +2,9 @@
 featuring a flexible layout, improved UI and last but not least, SASS and Compass.
 
 This is a work in progress, and will most probably remain dirty.  
-**Only tested in Google Chrome**  
 You're welcome to participate.
+
+**Currently only tested in Google Chrome.**
 
 To get this up and running in your local Liferay Plugins SDK
 
