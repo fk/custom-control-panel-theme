@@ -462,6 +462,13 @@ html > .lfr-dockbar-pinned {
 .dockbar a.user-fullname:hover {
   text-decoration: underline;
 }
+.dockbar .toggle-controls a {
+  background: url(../images/custom/fugue_wrench_tick.png) no-repeat 0 50%;
+  text-decoration: none;
+}
+.dockbar .toggle-controls a:hover {
+  text-decoration: underline;
+}
 .dockbar .menu-button-active {
   background: #5c94da;
 }
@@ -474,6 +481,28 @@ html > .lfr-dockbar-pinned {
 .dockbar .menu-button-active a {
   color: white;
   text-shadow: none;
+}
+.dockbar .menu-button {
+  background: url(../images/custom/arrow_down.png) no-repeat 93% 50%;
+  display: inline-block;
+  padding: 5px 20px 5px 5px;
+  text-decoration: none;
+}
+.dockbar .menu-button span {
+  background: url() no-repeat 0 50%;
+  padding-left: 20px;
+}
+.dockbar .add-content .menu-button span {
+  background-image: url(../images/custom/fugue_plus_button.png);
+}
+.dockbar .manage-content .menu-button span {
+  background-image: url(../images/custom/fugue_hammer_screwdriver.png);
+}
+.dockbar .my-places .menu-button span {
+  background-image: url(../images/custom/fugue_home_medium.png);
+}
+.dockbar .staging-options .menu-button span {
+  background-image: url(../images/dockbar/staging.png);
 }
 .dockbar .impersonating-user .user-links a {
   color: #999999;
@@ -538,14 +567,13 @@ html > .lfr-dockbar-pinned {
 .my-places-menu .current-site {
   border: 0;
 }
+.my-places-menu .current-site .site-type {
+  color: white;
+}
 .my-places-menu .current-site a {
   background: #6d6d6d url(../images/custom/fugue_arrow_000_medium.png) no-repeat scroll 2px 30%;
   color: white;
   text-shadow: none;
-}
-
-.my-places-menu .current-site .site-type {
-  color: white;
 }
 
 .my-places-menu .current-site a:hover,
@@ -562,44 +590,8 @@ html > .lfr-dockbar-pinned {
   color: white;
 }
 
-.dockbar .toggle-controls a {
-  background: url(../images/custom/fugue_wrench_tick.png) no-repeat 0 50%;
-  text-decoration: none;
-}
-.dockbar .toggle-controls a:hover {
-  text-decoration: underline;
-}
-
 .controls-hidden .toggle-controls a {
   background-image: url(../images/custom/fugue_wrench.png);
-}
-
-.dockbar .menu-button {
-  background: url(../images/custom/arrow_down.png) no-repeat 93% 50%;
-  display: inline-block;
-  padding: 5px 20px 5px 5px;
-  text-decoration: none;
-}
-
-.dockbar .menu-button span {
-  background: url() no-repeat 0 50%;
-  padding-left: 20px;
-}
-
-.dockbar .add-content .menu-button span {
-  background-image: url(../images/custom/fugue_plus_button.png);
-}
-
-.dockbar .manage-content .menu-button span {
-  background-image: url(../images/custom/fugue_hammer_screwdriver.png);
-}
-
-.dockbar .my-places .menu-button span {
-  background-image: url(../images/custom/fugue_home_medium.png);
-}
-
-.dockbar .staging-options .menu-button span {
-  background-image: url(../images/dockbar/staging.png);
 }
 
 .multiple-messages .dockbar-message {
@@ -609,7 +601,6 @@ html > .lfr-dockbar-pinned {
 .add-content-menu .add-page a {
   background-image: url(../images/custom/fugue_document_plus.png);
 }
-
 .add-content-menu .add-application a {
   background: url(../images/common/portlet.png) no-repeat 3px 50%;
   padding-left: 25px;
@@ -619,23 +610,18 @@ html > .lfr-dockbar-pinned {
   background: url() no-repeat 3px 50%;
   padding-left: 25px;
 }
-
 .manage-content-menu .manage-page a {
   background-image: url(../images/custom/fugue_document_pencil.png);
 }
-
 .manage-content-menu .page-layout a {
   background-image: url(../images/custom/fugue_layout_design.png);
 }
-
 .manage-content-menu .sitemap a {
   background-image: url(../images/custom/fugue_sitemap.png);
 }
-
 .manage-content-menu .settings a {
   background-image: url(../images/custom/fugue_gear_pencil.png);
 }
-
 .manage-content-menu .control-panel a {
   background-image: url(../images/dock/control_panel.png);
 }
@@ -1092,8 +1078,6 @@ textarea,
 }
 
 /* less round buttons */
-.aui-tabview-list,
-.aui-tab-active,
 body > .lfr-menu-list ul,
 .lfr-actions,
 .aui-dialog-content,

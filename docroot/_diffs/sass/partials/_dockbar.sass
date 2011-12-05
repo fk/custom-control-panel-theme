@@ -14,6 +14,11 @@
       text-decoration: none
       &:hover
         text-decoration: underline
+  .toggle-controls a
+    background: url(../images/custom/fugue_wrench_tick.png) no-repeat 0 50%
+    text-decoration: none
+    &:hover
+      text-decoration: underline
   .menu-button-active
     background: #5C94DA
     .menu-button
@@ -21,6 +26,22 @@
     a
       color: $page
       text-shadow: none
+  .menu-button
+    background: url(../images/custom/arrow_down.png) no-repeat 93% 50%
+    display: inline-block
+    padding: 5px 20px 5px 5px
+    text-decoration: none
+    span
+      background: url() no-repeat 0 50%
+      padding-left: 20px
+  .add-content .menu-button span
+    background-image: url(../images/custom/fugue_plus_button.png)
+  .manage-content .menu-button span
+    background-image: url(../images/custom/fugue_hammer_screwdriver.png)
+  .my-places .menu-button span
+    background-image: url(../images/custom/fugue_home_medium.png)
+  .staging-options .menu-button span
+    background-image: url(../images/dockbar/staging.png)
   .impersonating-user .user-links a
     color: #999
   .aui-toolbar-separator
@@ -62,15 +83,15 @@
   &:hover
     text-decoration: underline
 
-.my-places-menu .current-site
-  border: 0
-  a
-    background: #6d6d6d url(../images/custom/fugue_arrow_000_medium.png) no-repeat scroll 2px 30%
-    color: $page
-    text-shadow: none
-
-.my-places-menu .current-site .site-type
-  color: $page
+.my-places-menu
+  .current-site
+    border: 0
+    .site-type
+      color: $page
+    a
+      background: #6d6d6d url(../images/custom/fugue_arrow_000_medium.png) no-repeat scroll 2px 30%
+      color: $page
+      text-shadow: none
 
 .my-places-menu .current-site a:hover,
 .my-places-menu a:hover .site-type
@@ -83,65 +104,33 @@
 .my-places-menu a:hover .site-type
   color: $page
 
-.dockbar .toggle-controls a
-  background: url(../images/custom/fugue_wrench_tick.png) no-repeat 0 50%
-  text-decoration: none
-  &:hover
-    text-decoration: underline
-
 .controls-hidden .toggle-controls a
   background-image: url(../images/custom/fugue_wrench.png)
-
-.dockbar .menu-button
-  background: url(../images/custom/arrow_down.png) no-repeat 93% 50%
-  display: inline-block
-  padding: 5px 20px 5px 5px
-  text-decoration: none
-
-.dockbar .menu-button span
-  background: url() no-repeat 0 50%
-  padding-left: 20px
-
-.dockbar .add-content .menu-button span
-  background-image: url(../images/custom/fugue_plus_button.png)
-
-.dockbar .manage-content .menu-button span
-  background-image: url(../images/custom/fugue_hammer_screwdriver.png)
-
-.dockbar .my-places .menu-button span
-  background-image: url(../images/custom/fugue_home_medium.png)
-
-.dockbar .staging-options .menu-button span
-  background-image: url(../images/dockbar/staging.png)
 
 .multiple-messages .dockbar-message
   border-top: 1px solid #CCC
 
-.add-content-menu .add-page a
-  background-image: url(../images/custom/fugue_document_plus.png)
+.add-content-menu
+  .add-page a
+    background-image: url(../images/custom/fugue_document_plus.png)
+  .add-application a
+    background: url(../images/common/portlet.png) no-repeat 3px 50%
+    padding-left: 25px
 
-.add-content-menu .add-application a
-  background: url(../images/common/portlet.png) no-repeat 3px 50%
-  padding-left: 25px
-
-.manage-content-menu li a
-  background: url() no-repeat 3px 50%
-  padding-left: 25px
-
-.manage-content-menu .manage-page a
-  background-image: url(../images/custom/fugue_document_pencil.png)
-
-.manage-content-menu .page-layout a
-  background-image: url(../images/custom/fugue_layout_design.png)
-
-.manage-content-menu .sitemap a
-  background-image: url(../images/custom/fugue_sitemap.png)
-
-.manage-content-menu .settings a
-  background-image: url(../images/custom/fugue_gear_pencil.png)
-
-.manage-content-menu .control-panel a
-  background-image: url(../images/dock/control_panel.png)
+.manage-content-menu
+  li a
+    background: url() no-repeat 3px 50%
+    padding-left: 25px
+  .manage-page a
+    background-image: url(../images/custom/fugue_document_pencil.png)
+  .page-layout a
+    background-image: url(../images/custom/fugue_layout_design.png)
+  .sitemap a
+    background-image: url(../images/custom/fugue_sitemap.png)
+  .settings a
+    background-image: url(../images/custom/fugue_gear_pencil.png)
+  .control-panel a
+    background-image: url(../images/dock/control_panel.png)
 
 .aui-menu-content li,
 .lfr-menu-list ul li
